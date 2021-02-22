@@ -1,4 +1,7 @@
 <div class="container">
   <h1 class="title">PERSON LIST</h1>
-  <p>{{ persons | json }}</p>
+  <person-card
+    *ngFor="let person of persons"
+    [person]="person"
+  ></person-card>
 </div>

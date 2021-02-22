@@ -1,0 +1,25 @@
+.personCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.5rem 1rem 0.25rem rgb(117, 113, 113);
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    padding: 0.3rem 1.5rem;
+    box-shadow: 0rem 0.5rem 1rem 0.25rem rgb(223, 198, 198);
+  }
+
+  .personName {
+    color: brown;
+  }
+
+  .contactInfo {
+    text-align: right;
+  }
+}
