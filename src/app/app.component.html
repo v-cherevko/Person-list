@@ -1,7 +1,15 @@
 <div class="container">
   <h1 class="title">PERSON LIST</h1>
-  <person-card
-    *ngFor="let person of persons"
-    [person]="person"
-  ></person-card>
+  <div *ngIf="!showDetailedCard; else showDetailed">
+    <person-card
+      (click)="showDetailedCard = true"
+      *ngFor="let person of persons"
+      [person]="person"
+    ></person-card>
+  </div>
+  <ng-template #showDetailed>
+    <person-detailedCard
+      (close)="closeDetailedCard($event)"
+    ></person-detailedCard>
+  </ng-template>
 </div>
