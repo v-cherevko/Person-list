@@ -1,0 +1,31 @@
+<div class="modalWindow">
+  <div class="detailedPersonCard">
+    <div class="personInfo">
+      <h3 class="personName">{{ person.name }}</h3>
+      <hr />
+      <p>City: {{ person.address.city }}</p>
+      <p>Street: {{ person.address.street }}</p>
+      <p>Suite: {{ person.address.suite }}</p>
+      <p>Zipcode: {{ person.address.zipcode }}</p>
+      <hr />
+      <p>Contact information</p>
+      <p>Email: {{ person.email }}</p>
+      <p>Phone: {{ person.phone }}</p>
+      <p>Website: {{ person.website }}</p>
+    </div>
+    <div class="personContent">
+      <span (click)="onClick()" class="material-icons">
+        clear
+      </span>
+      <p class="text">
+        This person works in {{ person.company.name }}.<br />
+        His main goal in the company is to {{ person.company.bs }}.<br />
+        They often use the catchphrase: <br />
+        "{{ person.company.catchPhrase }}"!
+        <br />
+        Portfolio can be found on the {{ person.website }} website under the
+        nickname "{{ person.username }}".
+      </p>
+    </div>
+  </div>
+</div>

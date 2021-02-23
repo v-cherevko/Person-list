@@ -13,10 +13,16 @@ export class AppComponent implements OnInit {
 
   persons: any = [];
 
+  showDetailedCard: boolean = false
+
   ngOnInit() {
 
     this.http.get('http://jsonplaceholder.typicode.com/users').subscribe(data => this.persons = data);
 
+  }
+
+  closeDetailedCard() {
+    this.showDetailedCard = false
   }
 
 }

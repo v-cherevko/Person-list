@@ -1,0 +1,50 @@
+.modalWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(33, 34, 36, 0.979);
+
+  .detailedPersonCard {
+    display: flex;
+    width: 50%;
+    min-height: 60%;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0.25rem 1rem 0.1rem rgb(17, 15, 15);
+    color: white;
+    background: gray;
+    overflow: hidden;
+
+    .personInfo {
+      width: 30%;
+      padding: 0 0.5rem;
+      background: rgb(4, 4, 85);
+
+      .personName {
+        text-align: center;
+      }
+    }
+
+    .personContent {
+      width: 70%;
+      padding: 2rem 1rem;
+      position: relative;
+
+      .material-icons {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+      }
+
+      .text {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
