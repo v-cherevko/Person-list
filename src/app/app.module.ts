@@ -4,13 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PersonCardComponent } from './components/person.card/person.card'
-import { PersonDetailedComponent } from './components/person.detailed.card/person.detailed.card'
+import { PersonDetailedComponent } from './components/person.detailed.card/person.detailed.card.component'
+import { PersonFilterComponent } from './components/person.filter/filter.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonCardComponent,
-    PersonDetailedComponent
+    PersonDetailedComponent,
+    PersonFilterComponent
   ],
   imports: [
     BrowserModule,

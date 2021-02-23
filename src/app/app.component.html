@@ -1,9 +1,16 @@
 <div class="container">
   <h1 class="title">PERSON LIST</h1>
+  <filter-person
+    (clickSortAsc)="sortAsc()"
+    (clickSortDesc)="sortDesc()"
+    (clickGeoFilter)="geoFilter()"
+    (clickPhoneFilter)="phoneFilter()"
+    (clickResetFilter)="resetFilter()"
+  ></filter-person>
   <div *ngIf="!showDetailedCard; else showDetailed">
     <person-card
       (click)="showDetailedCard = true"
-      *ngFor="let person of persons"
+      *ngFor="let person of personsFilter"
       [person]="person"
     ></person-card>
   </div>
