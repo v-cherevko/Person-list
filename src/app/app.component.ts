@@ -17,7 +17,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    this.http.get('http://jsonplaceholder.typicode.com/users').subscribe(data => this.persons = data);
+    if (localStorage.person) {
+      this.showDetailedCard = true;
+      this.http.get('http://jsonplaceholder.typicode.com/users').subscribe(data => this.persons = data);
+    } else {
+      this.http.get('http://jsonplaceholder.typicode.com/users').subscribe(data => this.persons = data);
+    }
 
   }
 

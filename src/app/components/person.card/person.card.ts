@@ -31,4 +31,8 @@ export interface Person {
 
 export class PersonCardComponent {
     @Input() person: Person
+
+    setInfoInLocalStorage() {
+        localStorage.setItem('person', JSON.stringify(this.person));
+    }
 }
