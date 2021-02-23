@@ -7,12 +7,21 @@ import { Person } from '../person.card/person.card';
     styleUrls: ['./person.detailed.card.component.scss']
 })
 
-export class PersonDetailedComponent {
+export class PersonDetailedComponent implements OnInit {
 
     @Input() person: Person;
-    @Output() close = new EventEmitter<any>()
+    @Output() close = new EventEmitter<any>();
+
+    ngOnInit() {
+
+        if (localStorage.person) {
+            this.person = JSON.parse(localStorage.getItem('person') || '{}');
+        }
+
+    }
 
     onClick() {
-        this.close.emit()
+        localStorage.clear();
+        this.close.emit();
     }
 }
