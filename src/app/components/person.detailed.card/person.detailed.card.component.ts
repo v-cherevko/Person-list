@@ -20,7 +20,7 @@ export class PersonDetailedComponent implements OnInit {
 
     }
 
-    onClick() {
+    closeModalWindow() {
         localStorage.clear();
         this.close.emit();
     }

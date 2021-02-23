@@ -35,4 +35,5 @@ export class PersonCardComponent {
     setInfoInLocalStorage() {
         localStorage.setItem('person', JSON.stringify(this.person));
     }
+
 }
